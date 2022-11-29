@@ -25,6 +25,7 @@ cibi.Add(onigiri);
 
 foreach(Prodotto prodotto in cibi) {
     prodotto.StampaNomeEsteso();
+    prodotto.StampaDescrizione();
     prodotto.StampaPrezzoBase();
     prodotto.StampaPrezzoIvato();
     Console.WriteLine("～　∥　～　∥　～　∥　～　∥　～　∥　～");

@@ -72,5 +72,9 @@ namespace CSharpShop {
         public void StampaNomeEsteso() {
             Console.WriteLine(this.codice + this.nome);
         }
+
+        public void StampaDescrizione() {
+            Console.WriteLine(this.descrizione);
+        }
     }
 }
