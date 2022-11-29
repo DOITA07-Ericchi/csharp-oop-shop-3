@@ -18,9 +18,9 @@ namespace CSharpShop {
         public Prodotto() {
             var rand = new Random();
             ushort dimensioneCodice = 8;
-            string codice ="";
-            ushort[] arrayCodice = new ushort[dimensioneCodice-1];
-            for (int i = 0; i <= dimensioneCodice-1; i++) {
+            string codice = "";
+            ushort[] arrayCodice = new ushort[dimensioneCodice - 1];
+            for (int i = 0; i <= dimensioneCodice - 1; i++) {
                 codice += rand.Next(10);
             }
             this.codice = UInt32.Parse(codice);
