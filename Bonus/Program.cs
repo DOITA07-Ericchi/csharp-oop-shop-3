@@ -1,31 +1,34 @@
 ﻿using CSharpShop;
 
 Prodotto raamen = new Prodotto();
-raamen.setNome("ラーメン");
-raamen.setDescrizione("Un delizioso pasto veloce a base di noodle cinesi.");
-raamen.setPrezzo(150f);
-raamen.setIva(22f);
-raamen.StampaNomeEsteso();
-raamen.StampaPrezzoBase();
-raamen.StampaPrezzoIvato();
+raamen.SetNome("ラーメン");
+raamen.SetDescrizione("Un delizioso pasto veloce a base di noodle cinesi.");
+raamen.SetPrezzo(150f);
+raamen.SetIva(22f);
 
 Prodotto omuraisu = new Prodotto();
-omuraisu.setNome("オムライス");
-omuraisu.setDescrizione("Una omelette di riso decorata con ketchup che forma un disegno.");
-omuraisu.setPrezzo(1000f);
-omuraisu.setIva(22f);
-omuraisu.StampaNomeEsteso();
-omuraisu.StampaPrezzoBase();
-omuraisu.StampaPrezzoIvato();
+omuraisu.SetNome("オムライス");
+omuraisu.SetDescrizione("Una omelette di riso decorata con ketchup che forma un disegno.");
+omuraisu.SetPrezzo(1000f);
+omuraisu.SetIva(22f);
 
 Prodotto onigiri = new Prodotto();
-onigiri.setNome("おにぎり");
-onigiri.setDescrizione("Una polpetta di riso ripiena, con una sfiziosa alga Nori alla base.");
-onigiri.setPrezzo(450f);
-onigiri.setIva(22f);
-onigiri.StampaNomeEsteso();
-onigiri.StampaPrezzoBase();
-onigiri.StampaPrezzoIvato();
+onigiri.SetNome("おにぎり");
+onigiri.SetDescrizione("Una polpetta di riso ripiena, con una sfiziosa alga Nori alla base.");
+onigiri.SetPrezzo(450f);
+onigiri.SetIva(22f);
+
+List<Prodotto> cibi = new List<Prodotto>();
+cibi.Add(raamen);
+cibi.Add(omuraisu);
+cibi.Add(onigiri);
+
+foreach(Prodotto prodotto in cibi) {
+    prodotto.StampaNomeEsteso();
+    prodotto.StampaPrezzoBase();
+    prodotto.StampaPrezzoIvato();
+    Console.WriteLine("～　∥　～　∥　～　∥　～　∥　～　∥　～");
+}
 
 // Simulazione d'errore
-raamen.setCodice(12345678);
+// raamen.SetCodice(12345678);

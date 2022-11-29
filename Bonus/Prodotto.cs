@@ -9,7 +9,7 @@ namespace CSharpShop {
     internal class Prodotto {
         CultureInfo japan = CultureInfo.GetCultureInfo("ja-JP"); // Per impostare gli yen come valuta
 
-        private uint codice;
+        private string codice;
         private string nome;
         private string descrizione;
         private float prezzo;
@@ -23,38 +23,38 @@ namespace CSharpShop {
             for (int i = 0; i <= dimensioneCodice - 1; i++) {
                 codice += rand.Next(10);
             }
-            this.codice = UInt32.Parse(codice);
+            this.codice = codice.PadLeft(8, '0');
         }
 
-        public uint getCodice() {
+        public string GetCodice() {
             return codice;
         }
-        public string getNome() {
+        public string GetNome() {
             return nome;
         }
-        public string getDescrizione() {
+        public string GetDescrizione() {
             return descrizione;
         }
-        public float getPrezzo() {
+        public float GetPrezzo() {
             return prezzo;
         }
-        public float getIva() {
+        public float GetIva() {
             return iva;
         }
 
-        public void setCodice(uint codice) {
-            Console.WriteLine("Bzz. Il codice prodotto non può essere modificato.");
+        public void SetCodice(uint codice) {
+            throw new ArgumentException("Bzz. Il codice prodotto non può essere modificato.");
         }
-        public void setNome(string nome) {
+        public void SetNome(string nome) {
             this.nome = nome;
         }
-        public void setDescrizione(string descrizione) {
+        public void SetDescrizione(string descrizione) {
             this.descrizione = descrizione;
         }
-        public void setPrezzo(float prezzo) {
+        public void SetPrezzo(float prezzo) {
             this.prezzo = prezzo;
         }
-        public void setIva(float iva) {
+        public void SetIva(float iva) {
             this.iva = iva;
         }
 

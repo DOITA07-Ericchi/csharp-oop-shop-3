@@ -18,43 +18,43 @@ namespace CSharpShop {
         public Prodotto() {
             var rand = new Random();
             ushort dimensioneCodice = 8;
-            string codice ="";
-            ushort[] arrayCodice = new ushort[dimensioneCodice-1];
-            for (int i = 0; i <= dimensioneCodice-1; i++) {
+            string codice = "";
+            ushort[] arrayCodice = new ushort[dimensioneCodice - 1];
+            for (int i = 0; i <= dimensioneCodice - 1; i++) {
                 codice += rand.Next(10);
             }
             this.codice = UInt32.Parse(codice);
         }
 
-        public uint getCodice() {
+        public uint GetCodice() {
             return codice;
         }
-        public string getNome() {
+        public string GetNome() {
             return nome;
         }
-        public string getDescrizione() {
+        public string GetDescrizione() {
             return descrizione;
         }
-        public float getPrezzo() {
+        public float GetPrezzo() {
             return prezzo;
         }
-        public float getIva() {
+        public float GetIva() {
             return iva;
         }
 
-        public void setCodice(uint codice) {
-            Console.WriteLine("Bzz. Il codice prodotto non può essere modificato.");
+        public void SetCodice(uint codice) {
+            throw new ArgumentException("Bzz. Il codice prodotto non può essere modificato.");
         }
-        public void setNome(string nome) {
+        public void SetNome(string nome) {
             this.nome = nome;
         }
-        public void setDescrizione(string descrizione) {
+        public void SetDescrizione(string descrizione) {
             this.descrizione = descrizione;
         }
-        public void setPrezzo(float prezzo) {
+        public void SetPrezzo(float prezzo) {
             this.prezzo = prezzo;
         }
-        public void setIva(float iva) {
+        public void SetIva(float iva) {
             this.iva = iva;
         }
 
