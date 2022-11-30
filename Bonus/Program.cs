@@ -1,4 +1,7 @@
 ﻿using CSharpShop;
+using System.Text;
+
+Console.OutputEncoding = Encoding.UTF8;
 
 Prodotto raamen = new Prodotto();
 raamen.SetNome("ラーメン");

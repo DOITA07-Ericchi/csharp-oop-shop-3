@@ -16,7 +16,7 @@ namespace CSharpShop {
         private float iva;
 
         public Prodotto() {
-            var rand = new Random();
+            Random rand = new Random();
             ushort dimensioneCodice = 8;
             string codice = "";
             ushort[] arrayCodice = new ushort[dimensioneCodice - 1];
