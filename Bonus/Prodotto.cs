@@ -71,5 +71,16 @@ namespace CSharpShop {
         public void StampaDescrizione() {
             Console.WriteLine(this.descrizione);
         }
+
+        public virtual void StampaProdotto() {
+            Console.Write("Nome: ");
+            StampaNomeEsteso();
+            Console.Write("Descrizione: ");
+            StampaDescrizione();
+            Console.Write("Prezzo base: ");
+            StampaPrezzoBase();
+            Console.Write("Prezzo con IVA: ");
+            StampaPrezzoIvato();
+        }
     }
 }

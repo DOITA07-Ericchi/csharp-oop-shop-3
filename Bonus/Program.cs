@@ -27,10 +27,7 @@ cibi.Add(omuraisu);
 cibi.Add(onigiri);
 
 foreach(Prodotto prodotto in cibi) {
-    prodotto.StampaNomeEsteso();
-    prodotto.StampaDescrizione();
-    prodotto.StampaPrezzoBase();
-    prodotto.StampaPrezzoIvato();
+    prodotto.StampaProdotto();
     Console.WriteLine("～　∥　～　∥　～　∥　～　∥　～　∥　～");
 }
 
