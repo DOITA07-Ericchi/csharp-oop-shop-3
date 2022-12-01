@@ -6,16 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CSharpShop {
-    internal class Prodotto {
+    public class Prodotto {
         CultureInfo japan = CultureInfo.GetCultureInfo("ja-JP"); // Per impostare gli yen come valuta
 
         private string codice;
         private string nome;
+        public string Nome { get => nome; set => nome = value; }
         private string descrizione;
         private float prezzo;
         private float iva;
 
-        public Prodotto() {
+        public Prodotto(string codice) {
             Random rand = new Random();
             ushort dimensioneCodice = 8;
             string codice = "";
@@ -29,9 +30,6 @@ namespace CSharpShop {
         public string GetCodice() {
             return codice;
         }
-        public string GetNome() {
-            return nome;
-        }
         public string GetDescrizione() {
             return descrizione;
         }
@@ -44,9 +42,6 @@ namespace CSharpShop {
 
         public void SetCodice(uint codice) {
             throw new ArgumentException("Bzz. Il codice prodotto non può essere modificato.");
-        }
-        public void SetNome(string nome) {
-            this.nome = nome;
         }
         public void SetDescrizione(string descrizione) {
             this.descrizione = descrizione;

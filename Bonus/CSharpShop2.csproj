@@ -5,6 +5,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyName>Bonus</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Oggetti\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Oggetti\" />
+  </ItemGroup>
 </Project>

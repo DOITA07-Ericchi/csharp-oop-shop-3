@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpShop", "CSharpShop\CSharpShop.csproj", "{74B8D33F-93FA-4C4F-909F-DDE287E528C3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonus", "Bonus\Bonus.csproj", "{7682519D-80EE-4476-92BD-C397A1218B56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpShop2", "Bonus\CSharpShop2.csproj", "{7682519D-80EE-4476-92BD-C397A1218B56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{74B8D33F-93FA-4C4F-909F-DDE287E528C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74B8D33F-93FA-4C4F-909F-DDE287E528C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74B8D33F-93FA-4C4F-909F-DDE287E528C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74B8D33F-93FA-4C4F-909F-DDE287E528C3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7682519D-80EE-4476-92BD-C397A1218B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7682519D-80EE-4476-92BD-C397A1218B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7682519D-80EE-4476-92BD-C397A1218B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
