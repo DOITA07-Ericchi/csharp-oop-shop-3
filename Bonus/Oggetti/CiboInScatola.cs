@@ -3,7 +3,7 @@ using CSharpShop;
 
 namespace CSharpShop2.Oggetti {
     public class CiboInScatola : Prodotto {
-        public CiboInScatola() {
+        public CiboInScatola(string codice) {
 
         }
     }

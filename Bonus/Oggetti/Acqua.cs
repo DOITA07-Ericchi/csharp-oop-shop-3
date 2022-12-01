@@ -3,14 +3,48 @@ using System.Runtime.CompilerServices;
 using CSharpShop;
 
 namespace CSharpShop2 {
-    public class Acqua : Prodotto{
+    public class Acqua : Prodotto {
         private double capienzaMassima = 1.5;
+        public double CapienzaMassima { get => capienzaMassima; set => capienzaMassima = value; }
         private double litri;
-        private double ph;
-        private string sorgente;
+        public double Litri { get => litri; set => litri = value; }
+        private double? ph;
+        private string? sorgente;
 
-        public Acqua(double capienzaMassima, double litri, double ph, string sorgente, string codice, string nome, string descrizione, string prezzo, float iva) : base(codice) {
-            
+        public Acqua() {
+
+        }
+
+        public void SetPh(double ph) {
+            if (this.ph == null) {
+                this.ph = ph;
+            } else {
+                throw new ArgumentException("Bzz. Il PH non può essere modificato.");
+            }
+        }
+
+        public void SetSorgente(string sorgente) {
+            if (this.sorgente == null) {
+                this.sorgente = sorgente;
+            }
+            else {
+                throw new ArgumentException("Bzz. Il PH non può essere modificato.");
+            }
+        }
+
+        public double? GetPh(){
+            return this.ph;
+        }
+
+        public string? GetSorgente(){
+            return sorgente;
+        }
+
+        public Acqua(string codice, string nome, string descrizione, float prezzo, float iva, double capienzaMassima, double litri, double ph, string sorgente) : base(codice, nome, descrizione, prezzo, iva) {
+            this.capienzaMassima = capienzaMassima;
+            this.litri = litri;
+            this.ph = ph;
+            this.sorgente = sorgente;
         }
 
         public void Bevi(double litriDaBere) {
@@ -27,8 +61,7 @@ namespace CSharpShop2 {
             if (litriDaRiempire <= (this.capienzaMassima - this.litri)) {
                 this.litri += litriDaRiempire;
                 Console.WriteLine("Glug. La bottiglia ora contiene " + this.litri + " litri.");
-            }
-            else {
+            } else {
                 Console.WriteLine("Glug. La bottiglia ora contiene " + this.capienzaMassima + ",\nma " + (this.litri - this.capienzaMassima) + " litri sono straripati e ora allagano il pavimento!");
                 this.litri = capienzaMassima;
             }

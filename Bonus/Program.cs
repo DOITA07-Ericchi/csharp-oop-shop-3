@@ -1,4 +1,5 @@
 ﻿using CSharpShop;
+using CSharpShop2;
 using System.Text;
 
 Console.OutputEncoding = Encoding.UTF8;
@@ -21,6 +22,8 @@ onigiri.SetDescrizione("Una polpetta di riso ripiena, con una sfiziosa alga Nori
 onigiri.SetPrezzo(450f);
 onigiri.SetIva(22f);
 
+Acqua mizu = new Acqua();
+
 List<Prodotto> cibi = new List<Prodotto>();
 cibi.Add(raamen);
 cibi.Add(omuraisu);
@@ -29,7 +32,14 @@ cibi.Add(onigiri);
 foreach(Prodotto prodotto in cibi) {
     prodotto.StampaProdotto();
     Console.WriteLine("～　∥　～　∥　～　∥　～　∥　～　∥　～");
+    Console.WriteLine("Premi Invio per continuare.");
+    Console.ReadLine();
 }
+
+mizu.StampaProdotto();
+
+Console.WriteLine("Premi Invio per uscire.");
+Console.ReadLine();
 
 // Simulazione d'errore
 // raamen.SetCodice(12345678);
