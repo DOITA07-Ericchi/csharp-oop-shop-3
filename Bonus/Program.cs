@@ -35,8 +35,8 @@ foreach(Prodotto prodotto in cibi) {
     Console.WriteLine("Premi Invio per continuare.");
     Console.ReadLine();
 }
-
-mizu.Bevi(2);
+mizu.Riempi(1.2);
+Console.WriteLine("Il contenuto in galloni è: " + Acqua.convertiInGalloni(mizu.Litri));
 mizu.StampaProdotto();
 
 Console.WriteLine("Premi Invio per uscire.");
