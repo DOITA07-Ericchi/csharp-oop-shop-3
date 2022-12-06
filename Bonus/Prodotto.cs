@@ -14,6 +14,7 @@ namespace CSharpShop {
         private string descrizione;
         private float prezzo;
         private float iva;
+        static private uint contaProdotti;
 
         public void GeneraCodice() {
             Random rand = new Random();
@@ -29,6 +30,7 @@ namespace CSharpShop {
 
         public Prodotto() {
             GeneraCodice();
+            contaProdotti++;
         }
 
         public Prodotto(string codice, string nome, string descrizione, float prezzo, float iva) {
@@ -37,6 +39,7 @@ namespace CSharpShop {
             this.descrizione = descrizione;
             this.prezzo = prezzo;
             this.iva = iva;
+            contaProdotti++;
         }
 
         public string GetCodice() {
@@ -88,6 +91,10 @@ namespace CSharpShop {
 
         public void StampaDescrizione() {
             Console.WriteLine(this.descrizione);
+        }
+
+        public void StampaContatore() {
+            Console.WriteLine("Sono stati creati " + contaProdotti + " prodotti.");
         }
 
         public virtual void StampaProdotto() {
