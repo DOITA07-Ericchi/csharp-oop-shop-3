@@ -17,6 +17,9 @@ namespace CSharpShop2 {
 
         public void SetPh(double ph) {
             if (this.ph == null) {
+                if (this.ph < 0 || this.ph > 10) {
+                    throw new ArgumentException("Bzz. Il PH non è valido.");
+                }
                 this.ph = ph;
             } else {
                 throw new ArgumentException("Bzz. Il PH non può essere modificato.");

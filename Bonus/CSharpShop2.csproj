@@ -10,8 +10,10 @@
 
   <ItemGroup>
     <None Remove="Oggetti\" />
+    <None Remove="Eccezioni\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Oggetti\" />
+    <Folder Include="Eccezioni\" />
   </ItemGroup>
 </Project>
