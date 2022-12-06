@@ -36,6 +36,7 @@ foreach(Prodotto prodotto in cibi) {
     Console.ReadLine();
 }
 
+mizu.Bevi(2);
 mizu.StampaProdotto();
 
 Console.WriteLine("Premi Invio per uscire.");

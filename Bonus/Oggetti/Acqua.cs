@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using CSharpShop;
+using CSharpShop3.Eccezioni;
 
 namespace CSharpShop2 {
     public class Acqua : Prodotto {
@@ -55,7 +56,7 @@ namespace CSharpShop2 {
                 this.litri -= litriDaBere;
                 Console.WriteLine("Gluglu. Rimangono " + this.litri + " litri.");
             } else {
-                Console.WriteLine("Non ci sono abbastanza litri. Ne berrò solo " + this.litri + ".");
+                throw new AcquaFinitaException("Non ci sono abbastanza litri.");
                 this.litri = 0;
             }
         }
@@ -65,7 +66,7 @@ namespace CSharpShop2 {
                 this.litri += litriDaRiempire;
                 Console.WriteLine("Glug. La bottiglia ora contiene " + this.litri + " litri.");
             } else {
-                Console.WriteLine("Glug. La bottiglia ora contiene " + this.capienzaMassima + ",\nma " + (this.litri - this.capienzaMassima) + " litri sono straripati e ora allagano il pavimento!");
+                throw new AcquaFinitaException("Povera bottiglia, l'hai riempita troppo.");
                 this.litri = capienzaMassima;
             }
         }
@@ -84,6 +85,12 @@ namespace CSharpShop2 {
             Console.Write("Sorgente: ");
             Console.WriteLine(this.sorgente);
         }
-    }
+
+        public static double convertiInGalloni(double litri) {
+            const double galloni = 3.785;
+            litri = litri * galloni;
+            return litri;
+        }
+	}
 }
 
